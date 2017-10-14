@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+  </head>
+  <body>
+  
+    <section class="heading">
+      <h1 class="heading__main">TimePicker</h1>
+      <div class="heading__settings-icon">
+        <i class="fa fa-cog" aria-hidden="true"></i>
+      </div>
+    </section>
+    <section class="settings-choice">
+      <div class="icons icons--time">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+      </div>
+      <div class="icons icons--date">
+        <i class="fa fa-calendar" aria-hidden="true"></i>
+      </div>
+    </section>
+    <section class="timepickers">
+      <div class="timepickers__default">
+        <div class="default__heading">Default</div>
+        <div class="default__body">
+          
+            <div class="body__style body__style--icon"><i class="fa fa-clock-o" aria-hidden="true"></i></div>
+            <div class="time-wrapper">
+              <div class="body__style body__style--hours">
+                <div class="hour-num">12</div>
+                <i class="hover-carets fa fa-angle-up" data-updatehour="1" aria-hidden="true"></i>
+                <i class="hover-carets fa fa-angle-down" data-updatehour="-1" aria-hidden="true"></i>
+              </div>
+              <div class="body__style body__style--collon">:</div>
+              <div class="body__style body__style--minutes">
+                <div class="minute-num">00</div>
+                <i class="hover-carets fa fa-angle-up" data-updatemin="5" aria-hidden="true"></i>
+                <i class="hover-carets fa fa-angle-down" data-updatemin="-5" aria-hidden="true"></i>
+              </div>
+            </div>            
+            <div class="body__style body__style--caret"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
+            
+          
+          
+          <div class="body__style body__style--ampm">
+            <div class="ampm">AM</div>
+            <div class="ampm-selector"><i class="fa fa-refresh" aria-hidden="true"></i></div>
+          </div>
+        </div>
+        <div class="select-time-list">
+              
+          <ul class="fill-me-up"></ul>
+        </div>
+        <div class="default__time-grid">
+          <div class="time-grid-heading">HOURS</div>
+          <hr class="line-break">
+          <div class="time-grid-table table--hours">
+            
+          </div>
+          <div class="time-grid-heading">MINUTES</div>
+          <hr class="line-break">
+          <div class="time-grid-table table--minutes">
+            
+          </div>
+        </div>
+          
+        
+      </div>
+    </section>
+
+    
+    <script src="https://use.fontawesome.com/b70e0f0a83.js"></script>
+  </body>
+</html>
