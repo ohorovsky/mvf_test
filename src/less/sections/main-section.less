@@ -1,0 +1,27 @@
+#main {
+	padding-bottom: 100px;
+	.wrapper {
+		display: flex;
+		justify-content: space-between;
+		margin-top: -50px;
+
+		.block {
+			flex-direction: column;
+			max-width: 25%;
+			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+			padding: 20px 40px;
+			text-align: center;
+			background-color: @color-text-invert;
+			h2 {
+			}
+		}
+		&.icons {
+			padding: 50px 0;
+			margin-top: 0;
+			.block {
+				box-shadow: none;
+				flex: 1;
+			}
+		}
+	}
+}

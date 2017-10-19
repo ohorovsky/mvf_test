@@ -1,18 +1,38 @@
-@import "./media_queries";
-@import "./sections/header";
-@import "./sections/settings-choice";
-@import "./sections/timepickers";
-@import "./sections/datepicker";
+@import './media_queries';
+@import './variables';
+@import './sections/header';
+@import './sections/main-section';
+@import './sections/footer';
 
-*{
+* {
 	margin: 0;
 	padding: 0;
+	color: @color-text;
 }
 
-body{
-	background-color: #FAFAFA;
+body {
+	background-color: @color-text-invert;
 	font-family: 'Roboto', sans-serif;
 	position: relative;
 	user-select: none;
 }
 
+.container-md {
+	max-width: 80%;
+	margin: 0 auto;
+}
+.container-lg {
+	max-width: 90%;
+	margin: 0 auto;
+}
+
+.push-left {
+	float: left;
+}
+.push-right {
+	float: right;
+}
+
+.clearfix {
+	clear: both;
+}
