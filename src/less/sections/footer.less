@@ -62,4 +62,39 @@
 			}
 		}
 	}
+	@media @ipad, @desktop, @ipad-pro, @mobile {
+		.footer-bottom {
+			.footer-bottom-left {
+				max-width: inherit;
+				justify-content: space-between;
+			}
+			.footer-bottom-right {
+				position: inherit;
+				transform: translateY(0);
+				text-align: center;
+				margin-top: 25px;
+			}
+		}
+	}
+	@media @mobile {
+		.footer-list {
+			a {
+				li {
+					font-size: 8px;
+				}
+			}
+		}
+		.footer-bottom {
+			.footer-bottom-left {
+				flex-direction: column;
+				.white-logo {
+					max-width: 100%;
+					height: auto;
+					margin-bottom: 25px;
+				}
+			}
+			.footer-bottom-right {
+			}
+		}
+	}
 }

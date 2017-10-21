@@ -2,18 +2,85 @@
 	padding-bottom: 100px;
 	.wrapper {
 		display: flex;
-		justify-content: space-between;
+		justify-content: space-around;
 		margin-top: -50px;
+		&.options {
+			.block {
+				display: flex;
+				flex-direction: column;
 
+				h2,
+				p {
+					min-height: 106px;
+					max-width: 300px;
+				}
+				.img-wrapper {
+					position: relative;
+					padding-top: 40px;
+					flex: 1;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					p {
+						min-height: 0px;
+					}
+					img {
+						height: auto;
+						max-width: 100%;
+					}
+				}
+				.carousels {
+					position: relative;
+					.carousel-1,
+					.carousel-2,
+					.carousel-3,
+					.carousel-4,
+					.carousel-5,
+					.carousel-6 {
+						position: absolute;
+						top: 0;
+						opacity: 0;
+						visibility: hidden;
+						transition: opacity 0.5s, visibility 0.5s;
+						p {
+							padding-bottom: 36px;
+						}
+						.img-wrapper {
+							flex-direction: column;
+						}
+						&.active {
+							position: relative;
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+				}
+				.dots {
+					display: flex;
+					width: 150px;
+					justify-content: space-between;
+					margin: 0 auto;
+					.dot {
+						width: 10px;
+						height: 10px;
+						border-radius: 50%;
+						background-color: #9ea2a8;
+						transition: 0.25s;
+						&.active {
+							background-color: #fdc830;
+							transform: scale(1.5);
+						}
+					}
+				}
+			}
+		}
 		.block {
 			flex-direction: column;
 			max-width: 25%;
 			box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-			padding: 20px 40px;
+			padding: 20px 30px;
 			text-align: center;
 			background-color: @color-text-invert;
-			h2 {
-			}
 		}
 		&.icons {
 			padding: 50px 0;
@@ -21,6 +88,38 @@
 			.block {
 				box-shadow: none;
 				flex: 1;
+				p {
+					//max-width: 300px;
+				}
+			}
+		}
+		@media @desktop, @ipad-pro {
+			.block {
+				padding: 20px;
+				h2 {
+					font-size: 21px;
+					min-height: 70px !important;
+				}
+				.img-wrapper {
+					padding: 0 !important;
+				}
+			}
+		}
+		@media @ipad, @mobile {
+			&.options {
+				display: block;
+				.block {
+					max-width: inherit;
+					margin-bottom: 50px;
+					h2 {
+						font-size: 21px;
+						max-width: inherit;
+					}
+					p {
+						max-width: inherit;
+						font-size: 18px;
+					}
+				}
 			}
 		}
 	}

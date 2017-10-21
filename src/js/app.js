@@ -39,6 +39,46 @@ function selectItem(items) {
 	);
 }
 
+//******************************************************
+//******************** Interactive Tab *****************
+//******************************************************
+
+const dots = document.querySelectorAll('.dot');
+const carousels = document.querySelectorAll('.carousel');
+
+dots.forEach(dot =>
+	dot.addEventListener('click', function() {
+		carousels.forEach(carousel => {
+			carousel.classList.contains('active') ? carousel.classList.remove('active') : null;
+			carousel.dataset.item === this.dataset.item ? carousel.classList.add('active') : null;
+		});
+		dots.forEach(dot => {
+			dot.classList.contains('active') ? dot.classList.remove('active') : null;
+		});
+		this.classList.add('active');
+	})
+);
+
+//******************************************************
+//******************** Modal ***************************
+//******************************************************
+
+const privacyLink = document.querySelector('#privacyLink');
+const modal = document.querySelector('#modal');
+const overlay = document.querySelector('.overlay');
+const times = document.querySelector('.fa-times');
+
+times.addEventListener('click', () => document.body.classList.remove('active'));
+
+privacyLink.addEventListener('click', e => {
+	console.log('hell0');
+	e.preventDefault();
+	document.body.classList.add('active');
+	overlay.addEventListener('click', () => {
+		document.body.classList.remove('active');
+	});
+});
+
 // const settingsBtn = document.querySelector('.heading__settings-icon');
 // const settingsChoice = document.querySelector('.settings-choice');
 // const timeButton = document.querySelector('.icons--time');

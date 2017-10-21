@@ -8,6 +8,12 @@
 	.header-top {
 		position: relative;
 		padding: 20px 0;
+		.colour-logo {
+			@media @mobile {
+				width: 150px;
+				height: auto;
+			}
+		}
 		.fb-likes {
 			position: absolute;
 			top: 50%;
@@ -40,6 +46,15 @@
 		text-align: center;
 		margin: 0 auto;
 		padding: 50px 0;
+		@media @desktop, @ipad-pro {
+			font-size: 40px;
+		}
+		@media @ipad {
+			font-size: 32px;
+		}
+		@media @mobile {
+			font-size: @font-size-m;
+		}
 	}
 	.getQuotes {
 		background-color: rgba(255, 255, 255, 0.8);
@@ -57,12 +72,15 @@
 			left: 0;
 			.cube {
 				position: absolute;
-				top: 31px;
+				top: 41px;
 				right: -5px;
 				transform: rotateZ(45deg);
 				width: 10px;
 				height: 10px;
 				background-color: @color-accent-2;
+				@media @mobile {
+					top: 48px;
+				}
 			}
 		}
 		.getQuotes-from {
@@ -71,7 +89,7 @@
 			h2 {
 				font-size: @font-size-l;
 				padding-bottom: 20px;
-				font-weight: 300;
+				font-weight: 400;
 			}
 			.wrapper-select__from {
 				position: relative;
@@ -88,6 +106,9 @@
 						font-weight: 400;
 					}
 				}
+				.from-list {
+					z-index: 2;
+				}
 			}
 		}
 		.getQuotes-to {
@@ -95,7 +116,7 @@
 			h2 {
 				font-size: @font-size-l;
 				padding-bottom: 20px;
-				font-weight: 300;
+				font-weight: 400;
 			}
 			.wrapper-select__to {
 				position: relative;
@@ -110,6 +131,9 @@
 						top: 0;
 						right: 0;
 					}
+				}
+				.to-list {
+					z-index: 2;
 				}
 			}
 		}
@@ -160,6 +184,52 @@
 				p {
 					font-size: @font-size-xs;
 					padding-top: 10px;
+				}
+			}
+		}
+		@media @desktop, @ipad-pro {
+			.getQuotes-from,
+			.getQuotes-to,
+			.getQuotes-submit {
+				h2 {
+					font-size: @font-size-m;
+				}
+				.wrapper {
+					.submit-btn {
+						font-size: @font-size-m;
+					}
+				}
+			}
+		}
+		@media @ipad {
+			.getQuotes-from,
+			.getQuotes-to,
+			.getQuotes-submit {
+				h2 {
+					font-size: 18px;
+				}
+				.wrapper {
+					.submit-btn {
+						font-size: 18px;
+					}
+				}
+			}
+		}
+		@media @mobile {
+			display: block;
+			.getQuotes-from,
+			.getQuotes-to,
+			.getQuotes-submit {
+				margin-top: 20px;
+				margin-right: 0;
+				h2 {
+					font-size: 20px;
+					font-weight: 600;
+				}
+				.wrapper {
+					.submit-btn {
+						font-size: 18px;
+					}
 				}
 			}
 		}
