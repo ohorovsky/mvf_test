@@ -10,6 +10,9 @@ export default class Modal {
 		const modal = document.querySelector('#modal');
 		const overlay = document.querySelector('.overlay');
 		const times = document.querySelector('.fa-times');
+		const zoomIn = document.querySelector('.zoom-in');
+
+		window.innerWidth <= 600 ? zoomIn.classList.remove('zoom-in') : null;
 
 		times.addEventListener('click', () => document.body.classList.remove('active'));
 
