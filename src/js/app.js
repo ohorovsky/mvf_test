@@ -1,6 +1,5 @@
 import '../less/main.less';
 import Modal from './Modal.js';
-// import Datepicker from './Datepicker.js';
 
 //******************************************************
 //******************** Quote Options *******************
@@ -63,46 +62,7 @@ dots.forEach(dot =>
 //******************** Modal ***************************
 //******************************************************
 
-const privacyLink = document.querySelector('#privacyLink');
-const modal = document.querySelector('#modal');
-const overlay = document.querySelector('.overlay');
-const times = document.querySelector('.fa-times');
-
-times.addEventListener('click', () => document.body.classList.remove('active'));
-
-privacyLink.addEventListener('click', e => {
-	console.log('hell0');
-	e.preventDefault();
-	document.body.classList.add('active');
-	overlay.addEventListener('click', () => {
-		document.body.classList.remove('active');
-	});
+const MODAL = new Modal({
+	target: '.overlay',
+	trigger: '#privacyLink'
 });
-
-// const settingsBtn = document.querySelector('.heading__settings-icon');
-// const settingsChoice = document.querySelector('.settings-choice');
-// const timeButton = document.querySelector('.icons--time');
-// const dateButton = document.querySelector('.icons--date');
-// const timepickers = document.querySelector('.timepickers');
-// const datepicker = document.querySelector('.datepicker');
-
-// const TIMEPICKER = new Timepicker({
-// 	target : '.timepickers'
-// });
-// const DATEPICKER = new Datepicker({
-// 	target: '.datepicker'
-// });
-
-// const showElement = Timepicker.prototype.showElement;
-
-// timeButton.addEventListener('click', function(){
-// 	showElement(timepickers, "show-timepickers", this, "icons--time--active")
-// 	showElement(settingsChoice, "settings-choice-show", settingsBtn, "settings-icon-active")
-// 	datepicker.classList.contains("show-datepicker") ? showElement(datepicker, "show-datepicker", dateButton, "icons--date--active") : null
-// });
-// dateButton.addEventListener('click', function(){
-// 	showElement(datepicker, "show-datepicker", this, "icons--date--active")
-// 	showElement(settingsChoice, "settings-choice-show", settingsBtn, "settings-icon-active")
-// 	timepickers.classList.contains("show-timepickers") ? showElement(timepickers, "show-timepickers", timeButton, "icons--time--active") : null
-// });
-// settingsBtn.addEventListener("click", function(){showElement(settingsChoice, "settings-choice-show", this, "settings-icon-active")});

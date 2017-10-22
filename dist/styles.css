@@ -346,6 +346,7 @@
 #main .wrapper.icons .block {
   box-shadow: none;
   flex: 1;
+  padding: 0;
 }
 @media only screen and (min-width: 950px) and (max-width: 1071px), only screen and (min-width: 827px) and (max-width: 949px) {
   #main .wrapper .block {
@@ -374,6 +375,9 @@
   #main .wrapper.options .block p {
     max-width: inherit;
     font-size: 18px;
+  }
+  #main .wrapper.icons .block p {
+    font-size: 12px;
   }
 }
 #footer {
@@ -451,6 +455,10 @@
     text-align: center;
     margin-top: 25px;
   }
+  #footer .footer-bottom .footer-bottom-right a {
+    margin-right: 0;
+    margin: 15px;
+  }
 }
 @media only screen and (min-width: 200px) and (max-width: 705px) {
   #footer .footer-list a li {
@@ -464,18 +472,6 @@
     height: auto;
     margin-bottom: 25px;
   }
-}
-* {
-  margin: 0;
-  padding: 0;
-  color: #494a4b;
-  cursor: default;
-  font-family: 'Open Sans', sans-serif;
-}
-body {
-  background-color: #feffff;
-  position: relative;
-  user-select: none;
 }
 body.active {
   overflow: hidden;
@@ -531,6 +527,23 @@ body.active .zoom-in {
 }
 #modal p {
   text-align: justify;
+}
+@media only screen and (min-width: 200px) and (max-width: 705px) {
+  #modal {
+    width: 80%;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  color: #494a4b;
+  cursor: default;
+  font-family: 'Open Sans', sans-serif;
+}
+body {
+  background-color: #feffff;
+  position: relative;
+  user-select: none;
 }
 .container-md {
   max-width: 80%;
