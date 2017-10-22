@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin'); //after installing add
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); //after installing add this
 const extractLess = new ExtractTextPlugin({
   //after installing add this
-  filename: 'styles.css', //output file for styles after conversion from less
+  filename: 'style.css', //output file for styles after conversion from less
   disable: process.env.NODE_ENV === 'development'
 });
 
